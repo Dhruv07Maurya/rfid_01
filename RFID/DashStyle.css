@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: f5f5f5;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+#nav {
+    /* position: fixed; */
+    height: 12%;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 0 150px;
+    background-color: white;
+    z-index: 1;
+}
+#nav h1{
+    margin-left: 10px;
+}
+
+
+#nav h4 {
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    word-spacing: 10px;
+}
+
+#nav input[type="text"] {
+    margin-left: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    outline: none;
+}
+
+#nav input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+#nav .login-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;  
+    color: white;
+    background-color: #00881d;
+    border: 1px solid #00881d;
+    
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#nav .login-button:hover {
+    background-color:#029622d2;
+
+}
+.cam {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    height: 160px;
+    width: 160px;
+    background-color: #00881d63;
+    opacity: 0;
+   
+}
+.cam video{
+    width: 500px; /* Expanded width */
+    height: 500px;
+}
+
+.left {
+    animation: moveAndExpand 0.3s ease-out forwards;
+}
+
+@keyframes moveAndExpand {
+    0% {
+        opacity: 0;
+        transform: translateX(-00px);
+        /* width: 200px;
+        height: 200px; */
+    }
+    100% {
+        top: 15%;
+        opacity: 1;
+        transform: translateX(-500px);
+        width: 500px; /* Expanded width */
+        height: 500px; /* Expanded height */
+    }
+}
+
+.btn{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    padding: 10px 20px;
+    font-size: 80px;
+    font-weight: bold;  
+    color: white;
+    background-color: #00881d;
+    border: 1px solid #00881d;
+    border-radius:50% ;
+/*     
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px; */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transform: translate(-50%, -50%);
+}
+.btn:hover {
+    background-color:#029622f5;
+    color: #e4e2e2;
+
+}
+.obtn{
+    opacity: 0;
+}
